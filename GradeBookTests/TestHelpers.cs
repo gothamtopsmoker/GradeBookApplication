@@ -9,6 +9,9 @@ namespace GradeBookTests
 
         public static Type GetUserType(string fullName)
         {
+            // Force load tracking logic to make isolated tests run correctly
+            var dummy = typeof(GradeBook.Enums.GradeBookType);
+
             return (from assembly in AppDomain.CurrentDomain.GetAssemblies()
                     where assembly.FullName.StartsWith(_projectName)
                     from type in assembly.GetTypes()

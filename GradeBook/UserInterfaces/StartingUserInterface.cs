@@ -37,6 +37,7 @@ namespace GradeBook.UserInterfaces
             if (parts.Length != 4)
             {
                 Console.WriteLine("Command not valid, Create requires a name, type of gradebook, if it's weighted (true / false).");
+                Console.WriteLine("Available types: Standard, Ranked, ESNU, OneToFour, SixPoint");
                 return;
             }
             var name = parts[1];
@@ -53,6 +54,7 @@ namespace GradeBook.UserInterfaces
             else
             {
                 Console.WriteLine(parts[2] + " is not a supported type of gradebook, please try again");
+                Console.WriteLine("Available types: Standard, Ranked, ESNU, OneToFour, SixPoint");
                 return;
             }
 
