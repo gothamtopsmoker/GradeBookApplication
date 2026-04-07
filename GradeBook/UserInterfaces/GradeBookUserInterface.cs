@@ -25,6 +25,7 @@ namespace GradeBook.UserInterfaces
                 CommandRoute(command);
             }
 
+            GradeBook.Save();
             Console.WriteLine(GradeBook.Name + " has been closed.");
         }
 
