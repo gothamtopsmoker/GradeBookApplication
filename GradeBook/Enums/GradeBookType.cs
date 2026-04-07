@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GradeBook.Enums
 {
-    // zxc
+    
     public enum GradeBookType
     {
         Standard,
