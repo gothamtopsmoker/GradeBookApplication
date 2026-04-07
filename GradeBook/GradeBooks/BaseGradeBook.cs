@@ -266,7 +266,12 @@ namespace GradeBook.GradeBooks
                 if (string.IsNullOrEmpty(gradeBookType))
                     gradeBookType = "Standard";
                 else
-                    gradeBookType = Enum.GetName(gradebookEnum, int.Parse(gradeBookType));
+                {
+                    if (int.TryParse(gradeBookType, out int enumValue))
+                        gradeBookType = Enum.GetName(gradebookEnum, enumValue);
+                    else
+                        gradeBookType = gradeBookType.ToString();
+                }
             }
 
             // Get GradeBook from the GradeBook.GradeBooks namespace
